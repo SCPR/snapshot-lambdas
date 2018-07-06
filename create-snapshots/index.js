@@ -3,8 +3,7 @@
 var AWS = require('aws-sdk');
 var _ = require('lodash');
 
-// Configure AWS region
-AWS.config.region = 'us-west-2';
+AWS.config.region = process.env.REGION;
 
 // Instantiate ec2 w/ specific API version
 var ec2 = new AWS.EC2({apiVersion: '2015-10-01'});
